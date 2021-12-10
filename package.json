@@ -5,17 +5,21 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "i18n:report": "vue-cli-service i18n:report --src \"./src/**/*.?(js|vue)\" --locales \"./src/locales/**/*.json\""
   },
   "dependencies": {
     "axios": "^0.24.0",
     "core-js": "^3.6.5",
     "register-service-worker": "^1.7.1",
     "vue": "^3.0.0",
+    "vue-i18n": "^9.1.0",
     "vue-router": "^4.0.0-0",
+    "vue3-cookies": "^1.0.6",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {
+    "@intlify/vue-i18n-loader": "^3.0.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-plugin-pwa": "~4.5.0",
@@ -30,7 +34,8 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-vue": "^7.0.0"
+    "eslint-plugin-vue": "^7.0.0",
+    "vue-cli-plugin-i18n": "~2.3.1"
   },
   "eslintConfig": {
     "root": true,
@@ -45,7 +50,14 @@
       "parser": "babel-eslint"
     },
     "rules": {
-      "semi": "off"
+      "quotes": "off",
+      "semi": "off",
+      "indent": "off",
+      "no-tabs": "off",
+      "no-trailing-spaces": "off",
+      "padded-blocks": "off",
+      "space-before-blocks": "off",
+      "keyword-spacing": "off"
     }
   },
   "browserslist": [
